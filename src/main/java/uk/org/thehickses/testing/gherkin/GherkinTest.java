@@ -101,7 +101,8 @@ public class GherkinTest<T>
     {
         try
         {
-            testSequence.accept(testFixture);
+            if (testSequence != null)
+                testSequence.accept(testFixture);
         }
         catch (TestException ex)
         {
